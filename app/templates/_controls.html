@@ -1,0 +1,1 @@
+<div class="lab-controls"><span class="label">LAB MODE</span><a class="pill {% if mode=='vulnerable' %}active-danger{% endif %}" href="?mode=vulnerable{% if term is defined %}&q={{ term|urlencode }}{% endif %}">Vulnerable</a><a class="pill {% if mode=='secure' %}active-safe{% endif %}" href="?mode=secure{% if term is defined %}&q={{ term|urlencode }}{% endif %}">Secure</a></div>

@@ -1,0 +1,29 @@
+<details class="explanation">
+<summary>Show explanation</summary>
+<div class="explanation-body">
+  <section class="explanation-section">
+    <h3>1. Try this injection</h3>
+    <p>Enter the payload in the <strong>{{ input_field }}</strong> field.</p>
+    <div class="payload-list">
+      {% for field, payload, note in payloads %}
+      <div class="payload-row">
+        <div><span class="payload-field">{{ field }}</span><code>{{ payload }}</code><small>{{ note }}</small></div>
+        <button type="button" class="copy-button" data-copy="{{ payload }}">Copy</button>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="explanation-section code-comparison">
+    <div>
+      <h3>2. Why is it vulnerable?</h3>
+      <p>{{ vulnerable_explanation }}</p>
+      <pre><code>{{ vulnerable_code }}</code></pre>
+    </div>
+    <div>
+      <h3>3. How is it fixed?</h3>
+      <p>{{ secure_explanation }}</p>
+      <pre><code>{{ secure_code }}</code></pre>
+    </div>
+  </section>
+</div>
+</details>
